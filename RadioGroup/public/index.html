@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fa" dir="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./build/tailwind.css" rel="stylesheet" />
+  </head>
+  <body
+    class="flex justify-center items-center h-screen bg-gradient-to-r from-purple-500 to-blue-500"
+  >
+    <div x-data="{radio:1 , activeClass: 'bg-gradient-to-r from-pink-400 to-indigo-400 text-white ring-2 ring-indigo-300'}" class="flex flex-col max-w-md w-full gap-y-4">
+      <div @click="radio = 1" :class="radio === 1 ? activeClass : ''" class="bg-gray-100 rounded-md p-4 cursor-pointer flex justify-between items-center">
+        <div>
+          <p class="font-bold text-sm mb-2">StartUp</p>
+          <span>12GB/6 CPUs . 160 GB SSD disk</span>
+        </div>
+        <svg x-show="radio === 1" class="w-7 h-w-7 bg-gradient-to-r from-purple-200 to-indigo-200 rounded-full p-1 font-bold flex items-center justify-center text-indigo-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+      </div>
+      <div @click="radio = 2" :class="radio === 2 ? activeClass : ''" class="bg-gray-100 rounded-md p-4 cursor-pointer flex justify-between items-center">
+        <div>
+          <p class="font-bold text-sm mb-2">StartUp</p>
+          <span>12GB/6 CPUs . 160 GB SSD disk</span>
+        </div>
+        <svg x-show="radio === 2" class="w-7 h-w-7 bg-gradient-to-r from-purple-200 to-indigo-200 rounded-full p-1 font-bold flex items-center justify-center text-indigo-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+      </div>
+      <div @click="radio = 3" :class="radio === 3 ? activeClass : ''" class="bg-gray-100 rounded-md p-4 cursor-pointer flex justify-between items-center">
+        <div>
+          <p class="font-bold text-sm mb-2">StartUp</p>
+          <span>12GB/6 CPUs . 160 GB SSD disk</span>
+        </div>
+        <svg x-show="radio === 3" class="w-7 h-w-7 bg-gradient-to-r from-purple-200 to-indigo-200 rounded-full p-1 font-bold flex items-center justify-center text-indigo-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+      </div>
+    </div>
+
+    <script src="//unpkg.com/alpinejs" defer></script>
+  </body>
+</html>

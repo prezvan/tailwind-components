@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fa" dir="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./build/tailwind.css" rel="stylesheet" />
+  </head>
+  <body
+    class="flex justify-center items-center h-screen bg-gradient-to-r from-fuchsia-500 to-violet-600"
+  >
+    <div class="bg-white w-full max-w-md rounded-3xl p-4 flex flex-col gap-y-2">
+      <div x-data="{tabOne: false}">
+        <div
+          @click="tabOne = ! tabOne"
+          class="px-4 py-2 bg-purple-100 rounded-full text-sm font-medium flex justify-between items-center text-purple-800 cursor-pointer"
+        >
+          <span>What is your refund policy?</span>
+          <svg
+            :class="tabOne ? 'rotate-180' : ''"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="w-4 h-4 stroke-purple-900 transition-all duration-700"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M11.47 7.72a.75.75 0 011.06 0l7.5 7.5a.75.75 0 11-1.06 1.06L12 9.31l-6.97 6.97a.75.75 0 01-1.06-1.06l7.5-7.5z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </div>
+        <p x-show="tabOne" class="px-4 py-2 text-sm text-gray-500">
+          If you're unhappy with your purchase for any reason, email us within
+          90 days and we'll refund you in full, no questions asked.
+        </p>
+      </div>
+      <div x-data="{tabTwo:false}">
+        <div
+          @click="tabTwo = ! tabTwo"
+          class="px-4 py-2 bg-purple-100 rounded-full text-sm font-medium flex justify-between items-center text-purple-800 cursor-pointer"
+        >
+          <span>Do you offer technical support?</span>
+
+          <svg
+            :class="tabTwo ? 'rotate-180' : ''"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="w-4 h-4 stroke-purple-900 transition-all duration-700"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M11.47 7.72a.75.75 0 011.06 0l7.5 7.5a.75.75 0 11-1.06 1.06L12 9.31l-6.97 6.97a.75.75 0 01-1.06-1.06l7.5-7.5z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </div>
+        <p x-show="tabTwo" class="px-4 py-2 text-sm text-gray-500">No.</p>
+      </div>
+    </div>
+
+    <script src="//unpkg.com/alpinejs" defer></script>
+  </body>
+</html>
